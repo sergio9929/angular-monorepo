@@ -226,8 +226,6 @@ textarea {
 
 .text pre code {
     padding: 1.5em;
-    background-color: hsl(var(--primary-color-hsl) / 100%);
-    color: var(--base-color);
     display: block;
     white-space: pre;
     min-width: 100%;

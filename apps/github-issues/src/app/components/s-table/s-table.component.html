@@ -1,23 +1,31 @@
 @if (issues) {
-<pre>{{issues?.total_count}}</pre>
-<pre>{{issues | json}}</pre>
-}
-
 <table class="s-table">
     <thead>
         <tr>
-            <th>{{title}}</th>
-            <th>Hola</th>
+            <th>title</th>
+            <th>comments</th>
+            <th>created_at</th>
+            <th>state_reason</th>
         </tr>
     </thead>
     <tbody>
-        @for (row of rows; track row) {
+        @for (item of issues?.items; track item.id) {
         <tr>
-            <td>{{row}}</td>
-            <td>{{row}}</td>
+            <td>{{item.title}}</td>
+            <td>{{item.comments}}</td>
+            <td>{{item.created_at}}</td>
+            <td>{{item.state_reason}}</td>
         </tr>
         } @empty {
-        Empty list of users
+        <td [colSpan]="4">No hay resultados</td>
         }
     </tbody>
 </table>
+
+<div class="text">
+    <pre>{{issues?.total_count}}</pre>
+    <pre><code>{{issues.items[0] | json}}</code></pre>
+</div>
+} @else {
+    <p>Ha habido algun error</p>
+}
