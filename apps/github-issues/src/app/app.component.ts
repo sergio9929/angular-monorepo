@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { NxWelcomeComponent } from './nx-welcome.component';
+import { STableComponent } from './components/s-table/s-table.component';
+import { SContainerComponent, SSectionComponent } from '@angular-monorepo/shared-ui';
 
 @Component({
   standalone: true,
-  imports: [NxWelcomeComponent, RouterModule],
-  selector: 'angular-monorepo-root',
+  imports: [SContainerComponent, SSectionComponent, STableComponent, RouterModule],
+  selector: 's-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })

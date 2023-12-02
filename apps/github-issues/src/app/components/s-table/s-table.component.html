@@ -1,0 +1,23 @@
+@if (issues) {
+<pre>{{issues?.total_count}}</pre>
+<pre>{{issues | json}}</pre>
+}
+
+<table class="s-table">
+    <thead>
+        <tr>
+            <th>{{title}}</th>
+            <th>Hola</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (row of rows; track row) {
+        <tr>
+            <td>{{row}}</td>
+            <td>{{row}}</td>
+        </tr>
+        } @empty {
+        Empty list of users
+        }
+    </tbody>
+</table>

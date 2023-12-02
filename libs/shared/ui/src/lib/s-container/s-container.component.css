@@ -1,0 +1,11 @@
+.s-container {
+    display: grid;
+    justify-items: center;
+    padding: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .s-container {
+        padding: 2rem;
+    }
+}

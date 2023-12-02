@@ -1,0 +1,8 @@
+.s-table {
+    border-collapse: collapse;
+}
+
+.s-table :is(td, th) {
+    border: 1px solid var(--primary-color);
+    padding: var(--padding);
+}
