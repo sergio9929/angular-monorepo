@@ -1,3 +1,3 @@
-export * from './lib/s-container/s-container.component';
+export * from './lib/gs-container/gs-container.component';
 
-export * from './lib/s-section/s-section.component';
+export * from './lib/gs-section/gs-section.component';

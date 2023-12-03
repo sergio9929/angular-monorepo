@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { SSectionComponent } from './s-section.component';
+import { SSectionComponent } from './gs-section.component';
 
 describe('SSectionComponent', () => {
   let component: SSectionComponent;

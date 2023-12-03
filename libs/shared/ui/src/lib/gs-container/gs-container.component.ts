@@ -5,12 +5,14 @@ import { CommonModule } from '@angular/common';
   selector: 'gs-container',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './s-container.component.html',
-  styleUrl: './s-container.component.css',
+  templateUrl: './gs-container.component.html',
+  styleUrl: './gs-container.component.css',
   encapsulation: ViewEncapsulation.None,
 })
 export class SContainerComponent {
-  @HostBinding('class') classes = {
-    's-container': true,
-  };
+  @HostBinding('class') get classes() {
+    return {
+      'gs-container': true,
+    };
+  }
 }

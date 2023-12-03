@@ -1,8 +1,107 @@
+.s-table-container {
+    overflow: hidden;
+    overflow-x: auto;
+    border: var(--border-width) solid var(--border-color);
+    border-radius: 1em;
+    margin-bottom: 1rem;
+    display: flex;
+    width: 100%;
+}
+
 .s-table {
     border-collapse: collapse;
+    width: 100%;
+    background-color: var(--base-color);
 }
 
 .s-table :is(td, th) {
-    border: 1px solid var(--primary-color);
     padding: var(--padding);
+    text-align: start;
 }
+
+.s-table thead tr {
+    border-bottom: var(--border-width) solid var(--border-color);
+}
+
+.s-table thead tr:last-child {
+    border-bottom-width: calc(var(--border-width) * 3);
+}
+
+.s-table tbody tr {
+    border-top: var(--border-width) solid var(--border-color);
+}
+
+.s-table tbody tr:first-child {
+    border-top: none;
+}
+
+.s-table__row {
+    --row-color: var(--base-color);
+    background-color: var(--row-color);
+}
+
+.s-table__row--open {
+    background-color: hsl(var(--warning-color-hsl) / 5%);
+}
+
+.s-table__row--open .s-table__status {
+    background-color: var(--warning-color);
+    color: var(--base-color);
+    font-weight: normal;
+}
+
+.s-table__row--completed .s-table__status {
+    background-color: var(--success-color);
+    color: var(--base-color);
+    font-weight: normal;
+}
+
+.s-table__nose {
+    border: var(--border-width) solid var(--border-color);
+    display: grid;
+    justify-content: flex-start;
+    width: min-content;
+    border-radius: 1em;
+}
+
+.s-table__status,
+.s-table__reason {
+    padding: .3rem .6rem;
+}
+
+.s-table__reason {
+    border-radius: 0 0 1em 1em;
+    color: hsl(var(--primary-color-hsl) / 50%);
+    border: none;
+    border-top: none;
+    font-size: .8em;
+}
+
+.title-with-badge {
+    display: flex;
+    gap: .5em;
+    align-items: center;
+}
+
+.title-with-badge__badge {
+    font-size: .5em;
+}
+
+.user-tag {
+    display: inline-flex;
+    gap: .5em;
+    vertical-align: middle;
+    align-items: center;
+    margin-top: .5em;
+    padding-left: .4em;
+    color: hsl(var(--primary-color-hsl) / 50%);
+}
+
+.user-tag__image {
+    display: inline;
+    vertical-align: bottom;
+    border-radius: 1em;
+    height: 1.5em;
+}
+
+..user-tag__link {}

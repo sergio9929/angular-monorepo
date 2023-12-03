@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { SContainerComponent } from './s-container.component';
+import { SDateComponent } from './s-date.component';
 
-describe('SContainerComponent', () => {
-  let component: SContainerComponent;
-  let fixture: ComponentFixture<SContainerComponent>;
+describe('SDateComponent', () => {
+  let component: SDateComponent;
+  let fixture: ComponentFixture<SDateComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SContainerComponent],
+      imports: [SDateComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(SContainerComponent);
+    fixture = TestBed.createComponent(SDateComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

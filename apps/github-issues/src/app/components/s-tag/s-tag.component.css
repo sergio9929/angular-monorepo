@@ -1,0 +1,12 @@
+.s-tag {
+    background-color: hsl(var(--primary-color-hsl)/5%);
+    border-radius: 1em;
+    padding: .3em .6em;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.s-tag--bordered {
+    background-color: transparent;
+    border: var(--border-width) solid var(--border-color);
+}
