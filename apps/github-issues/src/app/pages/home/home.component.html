@@ -1,1 +1,38 @@
-<p>home works!</p>
+<gs-container>
+    <gs-section>
+        <h1>Github Issues</h1>
+
+        <p>Elige el método con el que quieres cargar las issues de tu repositorio</p>
+        <div class="tabs">
+            <div class="tabs__nav">
+                <button (click)="currentTab = 'repoUrlForm'" class="tabs__nav-button"
+                    [ngClass]="{ 'button--bordered': currentTab !== 'repoUrlForm'}">Cargar usando la URL del repositorio</button>
+
+                <button (click)="currentTab = 'userRepoForm'" class="tabs__nav-button"
+                    [ngClass]="{ 'button--bordered': currentTab !== 'userRepoForm'}">Cargar usando el usuario y repositorio</button>
+            </div>
+
+            <div class="tabs__container">
+                @if(currentTab === 'repoUrlForm') {
+                <form [formGroup]="repoUrlForm" (ngSubmit)="handleRepoUrlSubmit()" class="tabs__tab">
+                    <label for="issues-url">Repo URL</label>
+                    <input type="url" formControlName="url" id="issues-url" />
+
+                    <button type="submit" [disabled]="!repoUrlForm.valid">Ver issues</button>
+                </form>
+                } @else {
+                <form [formGroup]="userRepoForm" (ngSubmit)="handleUserRepoSubmit()" class="tabs__tab">
+                    <label for="issues-user">Nombre del usuario</label>
+                    <input type="text" formControlName="user" id="issues-user" />
+                    
+
+                    <label for="issues-repo">Nombre del repositorio</label>
+                    <input type="text" formControlName="repo" id="issues-repo" />
+
+                    <button type="submit" [disabled]="!userRepoForm.valid">Ver issues</button>
+                </form>
+                }
+            </div>
+        </div>
+    </gs-section>
+</gs-container>

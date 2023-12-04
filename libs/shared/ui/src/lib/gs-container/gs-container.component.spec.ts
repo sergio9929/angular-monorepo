@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { SContainerComponent } from './gs-container.component';
+import { ContainerComponent } from './gs-container.component';
 
-describe('SContainerComponent', () => {
-  let component: SContainerComponent;
-  let fixture: ComponentFixture<SContainerComponent>;
+describe('ContainerComponent', () => {
+  let component: ContainerComponent;
+  let fixture: ComponentFixture<ContainerComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SContainerComponent],
+      imports: [ContainerComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(SContainerComponent);
+    fixture = TestBed.createComponent(ContainerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

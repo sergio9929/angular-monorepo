@@ -14,7 +14,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './gs-section.component.css',
   encapsulation: ViewEncapsulation.None,
 })
-export class SSectionComponent {
+export class SectionComponent {
   @HostBinding('class') get classes() {
     return {
       'gs-section': true,

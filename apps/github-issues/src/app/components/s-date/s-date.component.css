@@ -1,8 +1,0 @@
-.s-date__date,
-.s-date__time {
-    display: block;
-}
-
-.s-date__time {
-    color: hsl(var(--primary-color-hsl) / 50%);
-}

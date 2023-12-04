@@ -31,7 +31,8 @@
     color: var(--primary-color);
     font-size: 16px;
     line-height: 1.5;
-    font-family: 'Satoshi', sans-serif;
+    font-family: 'General Sans', sans-serif;
+    font-family: 'Cabinet Grotesk', sans-serif;
     scroll-behavior: smooth;
     accent-color: var(--primary-color);
 }
@@ -93,6 +94,7 @@ h5,
 h6 {
     margin-bottom: .5em;
     line-height: 1.2;
+    /* font-family: 'Kola', sans-serif; */
 }
 
 :where(h1, h2, h3, h4, h5, h6):not(:first-child) {
@@ -127,7 +129,7 @@ label {
 
 input,
 select,
-button {
+:is(button, .button) {
     font: inherit;
     color: inherit;
 }
@@ -160,9 +162,61 @@ textarea {
     resize: none;
 }
 
-.icon {
-    vertical-align: top !important;
-    /* translate: 0 -.15em; */
+:is(button, .button) {
+    --color: var(--base-color);
+    --background-color: var(--primary-color-hsl);
+
+    -webkit-tap-highlight-color: transparent;
+    appearance: none;
+    font-size: inherit;
+    font-family: inherit;
+    border: none;
+    cursor: pointer;
+
+    box-shadow: 0 0 0 1em transparent;
+    background-color: hsl(var(--background-color));
+    color: var(--color);
+    padding: .5em .8em;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    gap: .6em;
+    align-items: center;
+    justify-content: center;
+
+    transition: scale .2s, opacity .2s, box-shadow .5s, background-color .5s, color .5s;
+}
+
+:is(button, .button):active {
+    transition-duration: .1s;
+    box-shadow: 0 0 0 2em hsl(var(--background-color) / 10%);
+    scale: .95;
+}
+
+:is(button, .button):disabled {
+    opacity: .3 !important;
+    pointer-events: none !important;
+}
+
+.button--bordered {
+    --color: var(--primary-color);
+    --background-color: 0 0% 0% / 0%;
+    box-shadow: inset 0 0 0 var(--border-width) var(--color);
+}
+
+.button--bordered:active {
+    --background-color: var(--primary-color-hsl) / 10%;
+    box-shadow: inset 0 0 0 var(--border-width) var(--color), 0 0 0 2em hsl(var(--primary-color-hsl) / 10%);
+}
+
+@media(hover: hover) and (pointer: fine) {
+    :is(button, .button):hover,
+    :is(button, .button):focus-visible {
+        scale: 1.1;
+    }
+
+    :is(button, .button):active {
+        scale: 1;
+    }
 }
 
 .primary-text {

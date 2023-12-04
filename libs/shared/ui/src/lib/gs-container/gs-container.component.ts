@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './gs-container.component.css',
   encapsulation: ViewEncapsulation.None,
 })
-export class SContainerComponent {
+export class ContainerComponent {
   @HostBinding('class') get classes() {
     return {
       'gs-container': true,

@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { SSectionComponent } from './gs-section.component';
+import { SectionComponent } from './gs-section.component';
 
-describe('SSectionComponent', () => {
-  let component: SSectionComponent;
-  let fixture: ComponentFixture<SSectionComponent>;
+describe('SectionComponent', () => {
+  let component: SectionComponent;
+  let fixture: ComponentFixture<SectionComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SSectionComponent],
+      imports: [SectionComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(SSectionComponent);
+    fixture = TestBed.createComponent(SectionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

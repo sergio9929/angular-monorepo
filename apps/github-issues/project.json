@@ -22,10 +22,8 @@
         "styles": ["apps/github-issues/src/styles.css"],
         "scripts": [],
         "server": "apps/github-issues/src/main.server.ts",
-        "prerender": true,
-        "ssr": {
-          "entry": "apps/github-issues/server.ts"
-        }
+        "prerender": false,
+        "ssr": false
       },
       "configurations": {
         "production": {

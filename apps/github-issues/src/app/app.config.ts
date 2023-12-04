@@ -15,6 +15,6 @@ export const appConfig: ApplicationConfig = {
     provideClientHydration(),
     provideRouter(appRoutes),
     provideHttpClient(withFetch()),
-    { provide: LOCALE_ID, useValue: 'es-ES' }
+    { provide: LOCALE_ID, useValue: 'es-ES' },
   ],
 };
