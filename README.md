@@ -9,7 +9,7 @@ Contenido:
   - `@angular-monorepo/shared-utils` en `/utils`: Algunas funciones reusables
 
 > [!WARNING]
-> La web no está adaptada a mobiles, ni pantallas muy estrechas.
+> La web no está adaptada a móviles, ni pantallas muy estrechas.
 
 ## Instalar dependencias
 
