@@ -1,9 +1,0 @@
-.gs-section {
-    padding-block: 3rem;
-    width: 100%;
-    max-width: var(--section-width);
-    overflow: hidden;
-}
-.gs-section--full {
-    max-width: 100%;
-}
