@@ -1,6 +1,8 @@
 # Angular Monorepo
 
-Esto es un monorepo de prueba generado usando [Nx](http://localhost:4200/).
+Esto es un monorepo de prueba generado usando [Nx](https://nx.dev/).
+
+Web publicada en GitHub Pages usando [este workflow](.github/workflows/build-on-branch.yml) en: [https://sergio9929.github.io/angular-monorepo/](https://sergio9929.github.io/angular-monorepo/)
 
 Contenido:
 - `/apps/github-issues` Aplicación creada usando Angular 17
