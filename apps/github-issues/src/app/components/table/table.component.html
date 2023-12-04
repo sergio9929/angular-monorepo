@@ -1,0 +1,60 @@
+<div class="s-table-container">
+    <table class="s-table">
+        <thead>
+            <tr class="s-table__row">
+                <th>Título</th>
+                <th>Comentarios</th>
+                <th>Última actualización</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @for (item of issues?.items; track item.id) {
+            <tr class="s-table__row"
+                [ngClass]="[item.state ? 's-table__row--' + item.state : '', item.state_reason ? 's-table__row--' + item.state_reason : '']">
+                <td>
+                    <div>
+                        {{ item.title }}
+                        <s-tag *ngFor="let label of item?.labels;" [title]="label.description">{{ label.name }}</s-tag>
+                    </div>
+
+                    <div>
+                        <a [href]="item.user.html_url" target="_blank">
+                            <s-tag class="user-tag">
+                                <img [ngSrc]="item.user.avatar_url" width="24" height="24" class="user-tag__image"
+                                    alt="">
+                                <span class="user-tag__text">{{'@' + item.user.login}}</span>
+                            </s-tag>
+                        </a>
+                    </div>
+                </td>
+
+                <td>{{ item.comments }}</td>
+
+                <td>
+                    <s-date [date]="item.updated_at" />
+                </td>
+
+                <td>
+                    <div class="s-table__nose">
+                        <s-tag class="s-table__status" [ngClass]="{'s-table__status--with-reason': item.state_reason}">
+                            {{ item.state.replaceAll('_', ' ') | titlecase }}
+                        </s-tag>
+
+                        <s-tag [bordered]="true" *ngIf="item.state_reason" class="s-table__reason">
+                            {{item.state_reason.replaceAll('_', ' ') | titlecase}}
+                        </s-tag>
+                    </div>
+                </td>
+
+                <td>
+                    <a [href]="item.html_url" target="_blank">Ver</a>
+                </td>
+            </tr>
+            } @empty {
+            <td [colSpan]="4">No hay resultados</td>
+            }
+        </tbody>
+    </table>
+</div>

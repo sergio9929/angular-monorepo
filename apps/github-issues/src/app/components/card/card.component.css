@@ -1,0 +1,8 @@
+.s-card {
+    border: var(--border-width) solid var(--border-color);
+    border-radius: 1em;
+    padding: var(--padding);
+    margin-bottom: var(--padding);
+    display: block;
+    text-align: center;
+}

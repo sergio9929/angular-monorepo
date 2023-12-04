@@ -1,0 +1,6 @@
+<div class="s-paginator">
+    <span class="s-paginator__text">Página: {{issues.page}}</span>
+    <button (click)="firstPage()" class="button--bordered s-paginator__button s-paginator__button--first" [disabled]="issues.page === 1">Inicio</button>
+    <button (click)="previousPage()" class="s-paginator__button s-paginator__button--previous" [disabled]="issues.page === 1">Anterior</button>
+    <button (click)="nextPage()" class="s-paginator__button s-paginator__button--next">Siguiente</button>
+</div>

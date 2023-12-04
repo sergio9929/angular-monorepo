@@ -1,0 +1,10 @@
+.s-paginator {
+    display: flex;
+    align-items: center;
+    gap: .5em;
+    margin-bottom: var(--padding);
+}
+
+.s-paginator__text {
+    margin-right: 1rem;
+}

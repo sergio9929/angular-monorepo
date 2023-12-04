@@ -1,0 +1,27 @@
+<gs-container>
+    <gs-section>
+        <a routerLink="/" class="button">← Volver</a>
+        <h1 class="title-with-badge">
+            <span class="title-with-badge__title">Issues</span>
+            <s-tag *ngIf="issues?.data?.total_count" class="title-with-badge__badge">
+                {{issues.data?.total_count}}
+            </s-tag>
+        </h1>
+
+        <div class="issues-header">
+            <s-paginator class="issues-header__paginator" />
+        </div>
+
+        @if (issues.loading) {
+        <s-card>Cargando...</s-card>
+        } @else if(!issues.errors) {
+        <s-table [issues]="issues.data" />
+        } @else {
+        <s-card>{{issues.errors}}</s-card>
+        }
+
+        <div class="issues-footer">
+            <s-paginator class="issues-footer__paginator" />
+        </div>
+    </gs-section>
+</gs-container>

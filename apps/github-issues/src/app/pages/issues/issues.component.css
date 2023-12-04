@@ -1,0 +1,17 @@
+.title-with-badge {
+    display: flex;
+    gap: .5em;
+    align-items: center;
+    margin-block: var(--padding);
+}
+
+.title-with-badge__badge {
+    font-size: .5em;
+}
+
+.issues-header,
+.issues-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
