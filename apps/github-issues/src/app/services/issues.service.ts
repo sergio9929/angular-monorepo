@@ -30,6 +30,7 @@ export class IssuesService {
         (data: any) => {
           this.data = data;
           this.loading = false;
+          this.errors = null;
         },
         (error: any) => {
           this.errors = error.error.errors
