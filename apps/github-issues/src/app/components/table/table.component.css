@@ -46,8 +46,14 @@
 
 .s-table__row--open .s-table__status {
     background-color: var(--warning-color);
-    color: var(--base-color);
+    color: var(--primary-color);
     font-weight: normal;
+}
+
+@media (prefers-color-scheme: dark) {
+    .s-table__row--open .s-table__status {
+        color: var(--base-color);
+    }
 }
 
 .s-table__row--completed .s-table__status {
