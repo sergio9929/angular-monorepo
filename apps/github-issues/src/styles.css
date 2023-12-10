@@ -31,7 +31,6 @@
     color: var(--primary-color);
     font-size: 16px;
     line-height: 1.5;
-    font-family: 'General Sans', sans-serif;
     font-family: 'Cabinet Grotesk', sans-serif;
     scroll-behavior: smooth;
     accent-color: var(--primary-color);
